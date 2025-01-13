@@ -1,0 +1,39 @@
+package org.example;
+
+public class Triangle implements GeometricFigure {
+    private final double side1;
+    private final double side2;
+    private final double side3;
+    private final String fillColor;
+    private final String borderColor;
+
+    public Triangle(double side1, double side2,
+                    double side3, String fillColor, String borderColor) {
+        this.side1 = side1;
+        this.side2 = side2;
+        this.side3 = side3;
+        this.fillColor = fillColor;
+        this.borderColor = borderColor;
+    }
+
+    @Override
+    public double calculateSquare() {
+        return Math.sqrt(calculatePerimeter() * (calculatePerimeter() - side1) * (calculatePerimeter() - side2) *
+                (calculatePerimeter() - side3));
+    }
+
+    @Override
+    public double calculatePerimeter() {
+        return side1 + side2 + side3;
+    }
+
+    @Override
+    public String getFillColor() {
+        return fillColor;
+    }
+
+    @Override
+    public String getBorderColor() {
+        return borderColor;
+    }
+}
