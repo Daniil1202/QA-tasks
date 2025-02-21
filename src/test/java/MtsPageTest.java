@@ -12,7 +12,7 @@ public class MtsPageTest {
     @BeforeClass
     public void setup() {
         //путь к драйверу
-        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+        System.setProperty("web-driver.chrome.driver", "path/to/chromedriver");
         driver = new ChromeDriver();
         driver.get("https://mts.by");
         mtsPage = new MtsPage(driver);
